@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6f263e">
+<title>Маленькое приглашение для тебя ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#70263f;--rose:#d98da3;--ink:#563644;--paper:#fffaf7}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 10% 5%,#ffe0e8 0,transparent 45%),radial-gradient(ellipse at 95% 90%,#f1cbd6 0,transparent 40%),#fff5f1;color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+main{position:relative;z-index:1;width:min(660px,92%);margin:24px auto;padding:clamp(22px,5vw,42px);background:#fffaf7ed;border:1px solid #fff;border-radius:28px;box-shadow:0 22px 70px #74263f1a}
+.hero{text-align:center}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#a45a73}
+h1{font:clamp(42px,10vw,62px)/1.05 "Great Vibes",cursive;color:var(--wine);font-weight:400;margin:14px 0}
+p{font-size:14px;line-height:1.85;color:#795b68}.flower{font-size:25px;color:#bc6d86}
+.photo{width:210px;height:245px;margin:24px auto 15px;padding:7px;border-radius:110px 110px 24px 24px;background:linear-gradient(140deg,#e9a7ba,#fff0e6,#9e4c68);box-shadow:0 12px 35px #9e516726}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}.caption{font:25px "Great Vibes",cursive;color:var(--wine)}
+.section{font:32px "Great Vibes",cursive;color:var(--wine);margin:28px 0 8px}
+label,.label{display:block;font-size:12px;font-weight:700;margin:15px 0 7px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #e8cbd3;border-radius:12px;background:#fff;color:var(--ink);font:inherit;font-size:13px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px #d9859d22}
+textarea{resize:vertical}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.choice{display:flex;align-items:center;gap:9px;margin:0;padding:12px;border:1px solid #ead3da;border-radius:12px;background:#fff;font-size:12px;font-weight:500;line-height:1.5;cursor:pointer}
+.choice input{width:auto;accent-color:var(--wine)}
+button{width:100%;margin-top:24px;padding:16px;border:0;border-radius:14px;background:linear-gradient(110deg,#70263f,#bd6481);color:white;font:700 13px "DM Sans",sans-serif;cursor:pointer;box-shadow:0 9px 22px #8e35512c}
+button:disabled{opacity:.6;cursor:wait}#status{text-align:center;font-size:13px;line-height:1.7;margin-top:14px}.footer{text-align:center;margin-top:24px;font:26px "Great Vibes",cursive;color:var(--wine)}
+.petal{position:fixed;top:-30px;pointer-events:none;opacity:.42;animation:fall linear infinite;z-index:0}@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@media(max-width:450px){main{margin:12px auto;padding:22px 17px;border-radius:23px}.choices{grid-template-columns:1fr}.photo{width:190px;height:225px}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="eyebrow">только для тебя ♡</div>
+    <div class="flower">❀</div>
+    <h1>У меня есть идея...</h1>
+    <p>Мне хочется провести с тобой особенный день — без спешки, с улыбками, приятными моментами и воспоминаниями, которые захочется сохранить. 🌹</p>
+    <div class="photo"><img src="/images/girl.jpg" alt="Фото для тебя" onerror="this.parentElement.style.display='none'"></div>
+    <div class="flower">♥</div>
+    <h1>Пойдёшь со мной на свидание?</h1>
+    <p>На этот раз ты выбираешь, как всё будет. Я хочу, чтобы тебе было приятно. ❤️</p>
+  </header>
+
+  <form id="dateForm">
+    <div class="section">Наш маленький план</div>
+    <label for="name">Как к тебе обращаться? 💌</label>
+    <input id="name" name="name" placeholder="Твоё имя" maxlength="60" required>
+    <label for="date">Какой день тебе подходит? 📅</label>
+    <input id="date" name="date" type="date" required>
+    <label for="time">Во сколько встретимся? 🕯️</label>
+    <select id="time" name="time" required>
+      <option value="">Выбери время</option>
+      <option>10:00</option><option>11:00</option><option>12:00</option>
+      <option>13:00</option><option>14:00</option><option>15:00</option>
+      <option>16:00</option><option>17:00</option><option>18:00</option>
+      <option>19:00</option><option>20:00</option>
+    </select>
+    <label for="place">Куда отправимся? 📍</label>
+    <select id="place" name="place" required>
+      <option value="">Выбери место</option>
+      <option>Уютное кафе ☕</option><option>Романтический ресторан 🍝</option>
+      <option>Прогулка у воды 🌊</option><option>Парк и пикник 🌷</option>
+      <option>Кино 🎬</option><option>Сюрприз от тебя ❤️</option>
+      <option>Другое — напишу ниже ✨</option>
+    </select>
+    <label for="customPlace">Конкретное место (необязательно)</label>
+    <input id="customPlace" name="customPlace" placeholder="Название или адрес" maxlength="180">
+    <div class="section">Что тебе по душе?</div>
+    <div class="choices">
+      <label class="choice"><input type="checkbox" name="activities" value="Кофе и разговоры">☕ Кофе и разговоры</label>
+      <label class="choice"><input type="checkbox" name="activities" value="Ужин при свечах">🕯️ Ужин при свечах</label>
+      <label class="choice"><input type="checkbox" name="activities" value="Прогулка и фото">🌷 Прогулка и фото</label>
+      <label class="choice"><input type="checkbox" name="activities" value="Фильм и уют">🎬 Фильм и уют</label>
+      <label class="choice"><input type="checkbox" name="activities" value="Что-то новое">✨ Что-то новое</label>
+      <label class="choice"><input type="checkbox" name="activities" value="Хочу сюрприз">🎁 Хочу сюрприз</label>
+    </div>
+    <label for="wishes">Твои пожелания 💗</label>
+    <textarea id="wishes" name="wishes" rows="4" maxlength="1000" placeholder="Что сделало бы этот день особенным?"></textarea>
+    <button id="send" type="submit">Отправить мой ответ ❤️</button>
+    <div id="status" role="status" aria-live="polite"></div>
+  </form>
+  <div class="footer">Буду рад провести этот день с тобой ♡</div>
+</main>
+<script>
+const form=document.getElementById("dateForm"),dateInput=document.getElementById("date");
+const now=new Date();dateInput.min=[now.getFullYear(),String(now.getMonth()+1).padStart(2,"0"),String(now.getDate()).padStart(2,"0")].join("-");
+for(let i=0;i<13;i++){const p=document.createElement("span");p.className="petal";p.textContent=["♥","♡","✿"][i%3];p.style.left=Math.random()*100+"vw";p.style.animationDuration=9+Math.random()*12+"s";p.style.animationDelay=-Math.random()*15+"s";p.style.fontSize=12+Math.random()*17+"px";document.body.appendChild(p)}
+form.addEventListener("submit",async e=>{e.preventDefault();const btn=document.getElementById("send"),status=document.getElementById("status");btn.disabled=true;status.textContent="Отправляем твоё послание... 💌";
+const data=Object.fromEntries(new FormData(form).entries());data.activities=[...form.querySelectorAll('input[name="activities"]:checked')].map(x=>x.value);
+try{const r=await fetch("/api/date-invitation",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});const out=await r.json();if(!r.ok)throw new Error(out.error||"Не удалось отправить");status.textContent="Твоё послание отправлено! ❤️ Спасибо за ответ.";form.reset()}
+catch(err){status.textContent="Не получилось отправить ответ. Попробуй ещё раз чуть позже 💗"}
+finally{btn.disabled=false}});
+</script>
+</body>
+</html>
